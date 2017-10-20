@@ -16,11 +16,7 @@ app.listen(port, listener)
 // get glasses  -return all glasses
 const glassesController = require('./controllers/glasses.controller.js')
 app.get('/glasses', glassesController.getAllGlasses)
-
-// app.post('/glasses/:id', (req, res) => {
-//   res.json()
-// })
-
+app.post('/glasses/:id/:name', glassesController.createGlass)
 
 
 // app.use((err, req, res, next) => {
